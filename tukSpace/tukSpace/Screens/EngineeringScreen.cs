@@ -27,20 +27,26 @@ namespace tukSpace
         public EngineeringScreen(KeyboardState kState, MouseState mState, Ship pShip, Game1 theWorld, Texture2D engCutout)
             : base(kState, mState, pShip, theWorld)
         {
-            mainCutout = engCutout;
+            mainCutout = engCutout; //set the main picture we will use for the engineering display
         }
 
         public void Initialize(ContentManager Content)
         {
             toolTipFont = Content.Load<SpriteFont>("wizfont");
             //REMEMBER OFFSETS BASED OFF IMAGE AT 0,0!!!!!!!!!!!!!!!!!!!!!
+            //this rectangles represent areas of the cutout that correspond to systems we want
+            //the user to interact with. 
             WarpNacelleRectangle = new Rectangle(0, 60, 200, 30);
-            MainImpulseRectangle = new Rectangle(261, 28, 311, 15);
+            MainImpulseRectangle = new Rectangle(261, 28, 55, 15);
             base.Initialize();
         }
 
         public override void HandleInput(GameTime gameTime, KeyboardState kState, MouseState mState)
         {
+            //mouse picking (detecting the mouse over an object) works like this
+            //create a tiny rectangle at the mouse coordinates that 1x1 pixels
+            //see if that rectangle is within any of other boxes which represent areas on the cutout
+            //do whatever we want; in this case we just adjust a tooltip
             Point mousePoint = new Point(mState.X, mState.Y);
             if (WarpNacelleRectangle.Contains(mousePoint))
             {
@@ -52,6 +58,7 @@ namespace tukSpace
             }
             else
             {
+                //default tooltip
                 toolTipText = "Hover over something";
             }
 
