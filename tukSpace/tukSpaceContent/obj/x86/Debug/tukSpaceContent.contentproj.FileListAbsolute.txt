@@ -1,0 +1,7 @@
+c:\users\james zarakas\documents\visual studio 2010\Projects\tukSpace\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jennifer\Desktop\Jim\tukSpace\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Wizand\Ohjelmointi\VS_workspaces\tukSpace_SVN\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jennifer\Desktop\tukSpace\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\James Zarakas\Desktop\tukSpace\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache

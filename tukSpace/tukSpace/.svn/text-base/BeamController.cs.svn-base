@@ -1,0 +1,102 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+
+namespace tukSpace
+{
+    class BeamController
+    {
+        private Ship theShip;
+
+        public List<Vector2> TargetList;
+        private int targetIndex;
+
+        private double timer;
+
+        private Vector2 beamPos;
+        public Texture2D beamTexture;
+
+        public bool CurrentlyFiring;
+
+        public BeamController(Ship theShip, Texture2D beamTexture)
+        {
+            this.theShip = theShip;
+            this.beamTexture = beamTexture;
+            this.CurrentlyFiring = false;
+            targetIndex = 0;
+            timer = 0.0f;
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            if ((CurrentlyFiring) && (targetIndex < TargetList.Count))
+            {
+                float radians = (float)Math.Atan2(TargetList[targetIndex].Y - theShip.myPosition.Y + 10, TargetList[targetIndex].X - theShip.myPosition.X + 10);
+
+                beamPos.X = theShip.myPosition.X + 5;
+                beamPos.Y = theShip.myPosition.Y + 3;
+                spriteBatch.Draw(beamTexture, beamPos, null, Color.White, radians, new Vector2(0, 5), 1.0f, SpriteEffects.None, 0f);
+            }
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            if (CurrentlyFiring)
+            {
+                if ((targetIndex >= TargetList.Count) || (TargetList[targetIndex] == null) )
+                {
+                    EndFiring();
+                }
+                else
+                {
+                    if (timer < 1.0)
+                    {
+                        timer += gameTime.ElapsedGameTime.TotalSeconds;
+                    }
+                    else if (timer >= 1.0)
+                    {
+                        if ((targetIndex <= (TargetList.Count - 1)))
+                        {
+                            timer = 0;
+                            targetIndex++;
+                        }
+                        else
+                        {
+                            EndFiring();
+                        }
+                    }
+                }
+            }
+
+        }
+
+        public void BeginFiring()
+        {
+            if (TargetList.Count == 0)
+            {
+                // no reason to fire
+            }
+            else
+            {
+                this.CurrentlyFiring = true;
+            }
+        }
+
+        public void EndFiring()
+        {
+            timer = 0;
+            targetIndex = 0;
+            CurrentlyFiring = false;
+        }
+
+    }
+}

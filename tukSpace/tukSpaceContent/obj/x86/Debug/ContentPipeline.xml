@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>enterprise.png</Source>
+      <Name>enterprise</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\enterprise.xnb</Output>
+      <Time>2010-12-27T18:10:14-05:00</Time>
+    </Item>
+    <Item>
+      <Source>badprise.png</Source>
+      <Name>badprise</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\badprise.xnb</Output>
+      <Time>2010-12-27T18:10:14-05:00</Time>
+    </Item>
+    <Item>
+      <Source>enterprise90t.png</Source>
+      <Name>enterprise90t</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\enterprise90t.xnb</Output>
+      <Time>2011-01-04T00:34:32-05:00</Time>
+    </Item>
+    <Item>
+      <Source>shield_overlay.png</Source>
+      <Name>shield_overlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\shield_overlay.xnb</Output>
+      <Time>2010-12-27T18:10:14-05:00</Time>
+    </Item>
+    <Item>
+      <Source>title.png</Source>
+      <Name>title</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\title.xnb</Output>
+      <Time>2011-01-04T00:38:28-05:00</Time>
+    </Item>
+    <Item>
+      <Source>enemy1.png</Source>
+      <Name>enemy1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\enemy1.xnb</Output>
+      <Time>2010-12-26T01:09:44-05:00</Time>
+    </Item>
+    <Item>
+      <Source>lu_corner.png</Source>
+      <Name>lu_corner</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\lu_corner.xnb</Output>
+      <Time>2010-12-27T19:29:26-05:00</Time>
+    </Item>
+    <Item>
+      <Source>rl_corner.png</Source>
+      <Name>rl_corner</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\rl_corner.xnb</Output>
+      <Time>2010-12-27T19:29:42-05:00</Time>
+    </Item>
+    <Item>
+      <Source>ru_corner.png</Source>
+      <Name>ru_corner</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\ru_corner.xnb</Output>
+      <Time>2010-12-27T19:29:58-05:00</Time>
+    </Item>
+    <Item>
+      <Source>top_frame.png</Source>
+      <Name>top_frame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\top_frame.xnb</Output>
+      <Time>2010-12-28T21:05:46-05:00</Time>
+    </Item>
+    <Item>
+      <Source>top_gauge.png</Source>
+      <Name>top_gauge</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\top_gauge.xnb</Output>
+      <Time>2010-12-28T20:34:42-05:00</Time>
+    </Item>
+    <Item>
+      <Source>bottom_frame.png</Source>
+      <Name>bottom_frame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\bottom_frame.xnb</Output>
+      <Time>2010-12-28T21:10:34-05:00</Time>
+    </Item>
+    <Item>
+      <Source>left_frame.png</Source>
+      <Name>left_frame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\left_frame.xnb</Output>
+      <Time>2010-12-28T22:10:20-05:00</Time>
+    </Item>
+    <Item>
+      <Source>right_frame.png</Source>
+      <Name>right_frame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\right_frame.xnb</Output>
+      <Time>2010-12-28T22:11:10-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BgCenterCircle.png</Source>
+      <Name>BgCenterCircle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\BgCenterCircle.xnb</Output>
+      <Time>2011-01-03T23:56:26-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BgGrid.png</Source>
+      <Name>BgGrid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\BgGrid.xnb</Output>
+      <Time>2010-12-30T02:39:46-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Helm_model2.png</Source>
+      <Name>Helm_model2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\Helm_model2.xnb</Output>
+      <Time>2010-12-31T02:03:44-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Warp_on.png</Source>
+      <Name>Warp_on</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\Warp_on.xnb</Output>
+      <Time>2010-12-31T02:37:14-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Warp_off.png</Source>
+      <Name>Warp_off</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\Warp_off.xnb</Output>
+      <Time>2010-12-31T03:05:34-05:00</Time>
+    </Item>
+    <Item>
+      <Source>enemyDot.png</Source>
+      <Name>enemyDot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\enemyDot.xnb</Output>
+      <Time>2011-01-03T15:51:22-05:00</Time>
+    </Item>
+    <Item>
+      <Source>HelmRadarImage.png</Source>
+      <Name>HelmRadarImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\HelmRadarImage.xnb</Output>
+      <Time>2011-02-11T20:10:38-05:00</Time>
+    </Item>
+    <Item>
+      <Source>playerDot.png</Source>
+      <Name>playerDot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\playerDot.xnb</Output>
+      <Time>2011-01-03T15:51:22-05:00</Time>
+    </Item>
+    <Item>
+      <Source>BgGridRed.png</Source>
+      <Name>BgGridRed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\BgGridRed.xnb</Output>
+      <Time>2011-01-07T15:27:54-05:00</Time>
+    </Item>
+    <Item>
+      <Source>phaser.png</Source>
+      <Name>phaser</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\phaser.xnb</Output>
+      <Time>2011-01-07T15:27:54-05:00</Time>
+    </Item>
+    <Item>
+      <Source>plasmaBeam.png</Source>
+      <Name>plasmaBeam</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\plasmaBeam.xnb</Output>
+      <Time>2011-01-07T15:27:54-05:00</Time>
+    </Item>
+    <Item>
+      <Source>waypoint.png</Source>
+      <Name>waypoint</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\waypoint.xnb</Output>
+      <Time>2011-01-07T15:27:54-05:00</Time>
+    </Item>
+    <Item>
+      <Source>mike_ship.png</Source>
+      <Name>mike_ship</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\mike_ship.xnb</Output>
+      <Time>2011-02-11T20:10:38-05:00</Time>
+    </Item>
+    <Item>
+      <Source>waypointDot.png</Source>
+      <Name>waypointDot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\waypointDot.xnb</Output>
+      <Time>2011-01-07T15:32:24-05:00</Time>
+    </Item>
+    <Item>
+      <Source>firepoint.png</Source>
+      <Name>firepoint</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\firepoint.xnb</Output>
+      <Time>2011-02-11T20:10:38-05:00</Time>
+    </Item>
+    <Item>
+      <Source>impulse.spritefont</Source>
+      <Name>impulse</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\impulse.xnb</Output>
+      <Time>2010-12-27T18:10:14-05:00</Time>
+    </Item>
+    <Item>
+      <Source>wizfont.spritefont</Source>
+      <Name>wizfont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\wizfont.xnb</Output>
+      <Time>2010-12-28T21:58:50-05:00</Time>
+    </Item>
+    <Item>
+      <Source>enterprise_cutout.png</Source>
+      <Name>enterprise_cutout</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\enterprise_cutout.xnb</Output>
+      <Time>2012-06-22T00:51:56.1914868-04:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpaceContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpaceContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpace\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-05-17T04:08:56.3208104-04:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
