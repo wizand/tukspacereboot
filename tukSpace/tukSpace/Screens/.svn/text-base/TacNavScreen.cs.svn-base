@@ -1,0 +1,193 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+
+namespace tukSpace
+{
+    class TacNavScreen : Screen
+    {
+
+        private Texture2D bgGrid;
+        private Camera2D cam;
+        private Viewport viewPort;
+        private List<Ship> allShips;
+
+        public TacNavScreen(KeyboardState kState,  MouseState mState, Ship theShip, Game1 theWorld, List<Ship> allShips, Viewport viewport)
+            : base(kState, mState, theShip, theWorld)
+        {
+            this.viewPort = viewport;
+            this.allShips = allShips;
+        }
+
+        public void Initialize(ContentManager content)
+        {
+            bgGrid = content.Load<Texture2D>("bgGridRed");
+            cam = new Camera2D(viewPort);
+            base.Initialize();
+        }
+
+        public override void HandleInput(GameTime gameTime, KeyboardState kState, MouseState mState)
+        {
+            if (kState.IsKeyUp(Keys.Space) && oldKState.IsKeyDown(Keys.Space))
+            {
+                pShip.beamController.TargetList = theWorld.firepointList;
+                pShip.beamController.BeginFiring();
+            }
+           /** if (kState.IsKeyUp(Keys.Space) && oldKState.IsKeyDown(Keys.Space))
+            {
+                pShip.beamOut = false;
+            }**/
+
+            else if (kState.IsKeyDown(Keys.S))
+            {
+                if (!base.oldKState.IsKeyDown(Keys.S)) pShip.shieldsUp = !pShip.shieldsUp;
+            }
+            
+            //waypoint add/remove handlers
+            else if ((mState.LeftButton == ButtonState.Pressed) && (kState.IsKeyDown(Keys.W)))
+            {
+                if ((base.oldMState.LeftButton == ButtonState.Released) && (base.oldKState.IsKeyDown(Keys.W)))
+                {
+                    AddWayPoint(cam.ToWorldLocation(new Vector2(mState.X, mState.Y)));
+                }
+            }
+            else if ((mState.RightButton == ButtonState.Pressed) && (kState.IsKeyDown(Keys.W)))
+            {
+                if ((base.oldMState.RightButton == ButtonState.Released) && (base.oldKState.IsKeyDown(Keys.W)))
+                {
+                    RemoveFirePoint(cam.ToWorldLocation(new Vector2(mState.X, mState.Y)));
+                }
+            }
+
+            //firepoint add/remove handlers
+            else if ((mState.LeftButton == ButtonState.Pressed) && (kState.IsKeyDown(Keys.F)))
+            {
+                if ((base.oldMState.LeftButton == ButtonState.Released) && (base.oldKState.IsKeyDown(Keys.F)))
+                {
+                    AddFirePoint(cam.ToWorldLocation(new Vector2(mState.X, mState.Y)));
+                }
+            }
+            else if ((mState.RightButton == ButtonState.Pressed) && (kState.IsKeyDown(Keys.F)))
+            {
+                if ((base.oldMState.RightButton == ButtonState.Released) && (base.oldKState.IsKeyDown(Keys.F)))
+                {
+                    RemoveFirePoint(cam.ToWorldLocation(new Vector2(mState.X, mState.Y)));
+                }
+            }
+            //zoom in/out
+
+            else if (kState.IsKeyDown(Keys.PageUp))
+            {
+                if (!base.oldKState.IsKeyDown(Keys.PageUp))
+                {
+                    cam.Zoom += 1.0f;
+                }
+            }
+            else if (kState.IsKeyDown(Keys.PageDown))
+            {
+                if (!base.oldKState.IsKeyDown(Keys.PageDown))
+                {
+                    cam.Zoom -= 1.0f;
+                }
+            } 
+            
+            base.HandleInput(gameTime, kState, mState);
+        }
+
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            //test out this camera
+            //quick hack to make camera work.
+            cam.Pos = pShip.myPosition;
+
+            spriteBatch.Begin();
+            
+            spriteBatch.End();
+
+            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
+
+            /**int horTimes = (int)(cam.Zoom * viewPort.Width) / bgGrid.Width + 1;
+            int verTimes = (int)(cam.Zoom * viewPort.Height) / bgGrid.Height + 1;
+            for (int i = 0; i < verTimes; i++) spriteBatch.Draw(bgGrid, new Vector2(0 - 34, 0 + (i * bgGrid.Height) - 32 - i), Color.White);
+            for (int i = 0; i < horTimes; i++) spriteBatch.Draw(bgGrid, new Vector2(bgGrid.Width - 34 - 1, 0 + (i * bgGrid.Height) - 32 - i), Color.White);*/
+
+            for (int i = 0; i < 2; i++) spriteBatch.Draw(bgGrid, new Vector2(0 - 34, 0 + (i * bgGrid.Height) - 32 - i), Color.White);
+            for (int i = 0; i < 2; i++) spriteBatch.Draw(bgGrid, new Vector2(bgGrid.Width - 34 - 1, 0 + (i * bgGrid.Height) - 32 - i), Color.White);
+
+            DrawNPShip(spriteBatch);
+            pShip.Draw(spriteBatch);
+
+            //draw waypoints
+            foreach (Vector2 currentWayPoint in theWorld.waypointList) spriteBatch.Draw(theWorld.waypointText, currentWayPoint, Color.White);
+            //draw firepoints
+            foreach (Vector2 currentFirePoint in theWorld.firepointList) spriteBatch.Draw(theWorld.firepointText, currentFirePoint, Color.White);
+            pShip.Draw(spriteBatch);
+            spriteBatch.End();
+        }
+
+        public void AddWayPoint(Vector2 pos)
+        {
+            theWorld.waypointList.Add(pos);
+            System.Console.WriteLine(MathHelper.Distance(pos.X, cam.Pos.X) + "," + MathHelper.Distance(pos.Y, cam.Pos.Y));
+        }
+
+        public void RemoveWayPoint(Vector2 pos)
+        {
+            Rectangle clickSpot = new Rectangle((int)pos.X, (int)pos.Y, 1, 1);//update to be fexible
+            System.Console.Write(clickSpot.ToString());
+            for (int i=0;i < theWorld.waypointList.Count;i++)
+            {
+
+                Rectangle wpArea = new Rectangle((int)theWorld.waypointList[i].X, (int)theWorld.waypointList[i].Y, 20, 20); //update me to be flexible
+                if (wpArea.Intersects(clickSpot))
+                {
+                    theWorld.waypointList.RemoveAt(i);
+                }
+            }
+        }
+
+        public void AddFirePoint(Vector2 pos)
+        {
+            theWorld.firepointList.Add(pos);
+            System.Console.WriteLine(MathHelper.Distance(pos.X, cam.Pos.X) + "," + MathHelper.Distance(pos.Y, cam.Pos.Y));
+        }
+
+        public void RemoveFirePoint(Vector2 pos)
+        {
+            Rectangle clickSpot = new Rectangle((int)pos.X, (int)pos.Y, 1, 1);//update to be fexible
+            System.Console.Write(clickSpot.ToString());
+            for (int i = 0; i < theWorld.firepointList.Count; i++)
+            {
+
+                Rectangle wpArea = new Rectangle((int)theWorld.firepointList[i].X, (int)theWorld.firepointList[i].Y, 20, 20); //update me to be flexible
+                if (wpArea.Intersects(clickSpot))
+                {
+                    theWorld.firepointList.RemoveAt(i);
+                }
+            }
+        }
+
+        //Method for drawing enemy ships in the allShips list. 
+        //Only draws ship if Ship.amIVisible is set to true.
+        private void DrawNPShip(SpriteBatch currentSB)
+        {
+            foreach (Ship currentShip in allShips)
+            {
+                if (currentShip.visible == true) currentShip.Draw(currentSB);
+            }
+        }
+
+                
+
+
+    }
+}

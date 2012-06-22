@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>enterprise.png</Source>
+      <Name>enterprise</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\enterprise.xnb</Output>
+      <Time>2010-12-27T09:19:35.392431-05:00</Time>
+    </Item>
+    <Item>
+      <Source>enterprise90.png</Source>
+      <Name>enterprise90</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\enterprise90.xnb</Output>
+      <Time>2010-12-27T09:19:35.441256-05:00</Time>
+    </Item>
+    <Item>
+      <Source>red.png</Source>
+      <Name>red</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\red.xnb</Output>
+      <Time>2010-12-27T09:19:35.4812925-05:00</Time>
+    </Item>
+    <Item>
+      <Source>badprise.png</Source>
+      <Name>badprise</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\badprise.xnb</Output>
+      <Time>2010-12-27T09:19:35.431491-05:00</Time>
+    </Item>
+    <Item>
+      <Source>enterprise90t.png</Source>
+      <Name>enterprise90t</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\enterprise90t.xnb</Output>
+      <Time>2010-12-27T09:19:35.3875485-05:00</Time>
+    </Item>
+    <Item>
+      <Source>shield_overlay.png</Source>
+      <Name>shield_overlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\shield_overlay.xnb</Output>
+      <Time>2010-12-27T09:19:35.4676215-05:00</Time>
+    </Item>
+    <Item>
+      <Source>HelmButtonsScale.png</Source>
+      <Name>HelmButtonsScale</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\HelmButtonsScale.xnb</Output>
+      <Time>2010-12-27T09:19:35.3602065-05:00</Time>
+    </Item>
+    <Item>
+      <Source>HelmButtonsScaleRight.png</Source>
+      <Name>HelmButtonsScaleRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\HelmButtonsScaleRight.xnb</Output>
+      <Time>2010-12-27T09:19:35.47641-05:00</Time>
+    </Item>
+    <Item>
+      <Source>title.png</Source>
+      <Name>title</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\title.xnb</Output>
+      <Time>2010-12-27T09:19:35.4227025-05:00</Time>
+    </Item>
+    <Item>
+      <Source>enemy1.png</Source>
+      <Name>enemy1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\enemy1.xnb</Output>
+      <Time>2010-12-27T13:33:12.0471265-05:00</Time>
+    </Item>
+    <Item>
+      <Source>lu_corner.png</Source>
+      <Name>lu_corner</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\lu_corner.xnb</Output>
+      <Time>2010-12-27T13:33:12.0725155-05:00</Time>
+    </Item>
+    <Item>
+      <Source>rl_corner.png</Source>
+      <Name>rl_corner</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\rl_corner.xnb</Output>
+      <Time>2010-12-27T13:33:12.0647035-05:00</Time>
+    </Item>
+    <Item>
+      <Source>ru_corner.png</Source>
+      <Name>ru_corner</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\ru_corner.xnb</Output>
+      <Time>2010-12-27T13:33:12.055915-05:00</Time>
+    </Item>
+    <Item>
+      <Source>impulse.spritefont</Source>
+      <Name>impulse</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\impulse.xnb</Output>
+      <Time>2010-12-27T09:19:35.4266085-05:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpaceContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpaceContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\James Zarakas\Desktop\citylevelgaming\tukSpace\tukSpace\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2010-09-19T22:40:19.654203-04:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
