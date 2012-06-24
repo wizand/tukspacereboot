@@ -6,3 +6,4 @@ C:\Users\Jennifer\Desktop\tukSpace\tukSpace\tukSpaceContent\obj\x86\Debug\Resolv
 C:\Users\James Zarakas\Desktop\tukSpace\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\James Zarakas\Documents\old tukspace from wizand\tukSpace_SVN_probably_the_newest\tukSpace_SVN\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mike\Desktop\tukspacereboot\tukSpace\tukSpaceContent\obj\x86\Debug\ResolveAssemblyReference.cache
