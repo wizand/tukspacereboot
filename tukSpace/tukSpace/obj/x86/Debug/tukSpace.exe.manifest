@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tukSpace.exe" size="44032">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tukSpace.exe" size="41984">
       <assemblyIdentity name="tukSpace" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>z9/n3prNkQqNhShUYpSK88yKOXM=</dsig:DigestValue>
+        <dsig:DigestValue>HzI/FNE5c86pmsS6i5AUfXmR8Tw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -375,6 +375,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>jcHRjz1lGNk/vh++DatYV9rtZw0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\warpsystem.xnb" size="889803">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EF3Ivt8H9bHJKiS8F5bpQAE2PXk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\waypoint.xnb" size="1787">

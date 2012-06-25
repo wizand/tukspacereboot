@@ -17,6 +17,7 @@ namespace tukSpace
     class EngineeringScreen : Screen
     {
         private Texture2D mainCutout;
+        private Texture2D warpCutout;
 
         private SpriteFont toolTipFont;
         private Rectangle WarpNacelleRectangle;
@@ -38,6 +39,9 @@ namespace tukSpace
             //the user to interact with. 
             WarpNacelleRectangle = new Rectangle(0, 60, 200, 30);
             MainImpulseRectangle = new Rectangle(261, 28, 55, 15);
+
+            warpCutout = Content.Load<Texture2D>("warpsystem");
+
             base.Initialize();
         }
 
@@ -69,7 +73,7 @@ namespace tukSpace
         {
             spriteBatch.Begin();
             spriteBatch.Draw(mainCutout, Vector2.Zero, Color.White);
-
+            spriteBatch.Draw(warpCutout, new Vector2(367, 300), Color.White);
             spriteBatch.DrawString(toolTipFont, toolTipText, new Vector2(30, 201), Color.White);
             spriteBatch.DrawString(toolTipFont, oldMState.X.ToString() + ", " + oldMState.Y.ToString(), new Vector2(30, 300), Color.White);
             spriteBatch.End();
