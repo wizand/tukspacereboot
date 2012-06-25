@@ -180,13 +180,14 @@ namespace tukSpace
                 cam.Zoom += (float)(mState.ScrollWheelValue - oldMState.ScrollWheelValue) * .001f;
 
            //being hacked in for testing
-            RotatedRectangle mousePointer =  new RotatedRectangle(new Rectangle(mState.X, mState.Y, 1, 1),0f);
+
+            //Rectangle mousePointer = new Rectangle(mState.X, mState.Y, pShip.myTexture.Width, pShip.myTexture.Height);
+            Rectangle mousePointer = new Rectangle(mState.X, mState.Y, 1, 1);
             if (mState.LeftButton == ButtonState.Released && oldMState.LeftButton == ButtonState.Pressed)
             {
-                if (mousePointer.Intersects(pShip.collsionRectangle))
+                if (RectCollision.Check(pShip.collisionRectangle, new Vector2(27,11), pShip.rotationAngle, mousePointer, new Vector2(mousePointer.Width/2,mousePointer.Height/2), 0f))
                     pShip.shieldsUp = !pShip.shieldsUp;
             }
-
             
 
             base.HandleInput(gameTime, kState, mState);
@@ -213,8 +214,8 @@ namespace tukSpace
             DrawBackground(spriteBatch);
             spriteBatch.End();
 
-            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
-
+            //spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
+            spriteBatch.Begin();
                 //Method to handle all NPShips drawing
                 DrawNPShip(spriteBatch);
 
