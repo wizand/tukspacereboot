@@ -163,6 +163,11 @@ namespace tukSpace
                 {
                     currentShip.visible = true;
                 }
+                if (!pShip.Equals(currentShip))
+                {
+                    if (pShip.collsionRectangle.Intersects(currentShip.collsionRectangle))
+                        currentShip.shieldsUp = !currentShip.shieldsUp;
+                }
             }
             ;
             if (curScreen.ReleaseMe == true)

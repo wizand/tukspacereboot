@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tukSpace.exe" size="38400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tukSpace.exe" size="41472">
       <assemblyIdentity name="tukSpace" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>GjI1UmRpVwLhCX/HxgJqvQRfkkA=</dsig:DigestValue>
+        <dsig:DigestValue>Ey1maq/N7tHu7+7cKd1SJhNXySw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

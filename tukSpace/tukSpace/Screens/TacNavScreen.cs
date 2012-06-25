@@ -42,11 +42,8 @@ namespace tukSpace
                 pShip.beamController.TargetList = theWorld.firepointList;
                 pShip.beamController.BeginFiring();
             }
-           /** if (kState.IsKeyUp(Keys.Space) && oldKState.IsKeyDown(Keys.Space))
-            {
-                pShip.beamOut = false;
-            }**/
 
+            //toggle shields
             else if (kState.IsKeyDown(Keys.S))
             {
                 if (!base.oldKState.IsKeyDown(Keys.S)) pShip.shieldsUp = !pShip.shieldsUp;
@@ -87,12 +84,14 @@ namespace tukSpace
             //single fire target mode
             else if ((mState.RightButton == ButtonState.Pressed))
             {
-                allShips[0].beamController.ManualFireStart(new Vector2(mState.X,mState.Y));
+                pShip.beamController.ManualFireStart(new Vector2(mState.X,mState.Y));
+                pShip.beamController.singleFireTarget.X = mState.X;
+                pShip.beamController.singleFireTarget.Y = mState.Y;
             }
 
             else if ((mState.RightButton != ButtonState.Pressed) && (oldMState.RightButton == ButtonState.Pressed))
             {
-                allShips[0].beamController.ManualFireStop();
+                pShip.beamController.ManualFireStop();
             }
             //zoom in/out
 
@@ -109,8 +108,10 @@ namespace tukSpace
                 {
                     cam.Zoom -= 1.0f;
                 }
-            } 
-            
+            }
+            if (mState.ScrollWheelValue != oldMState.ScrollWheelValue)
+                cam.Zoom += (float)(mState.ScrollWheelValue - oldMState.ScrollWheelValue) * .001f;
+
             base.HandleInput(gameTime, kState, mState);
         }
 

@@ -20,6 +20,7 @@ namespace tukSpace
 
         protected Ship pShip;
         public bool ReleaseMe;
+    
 
 
         public Screen()

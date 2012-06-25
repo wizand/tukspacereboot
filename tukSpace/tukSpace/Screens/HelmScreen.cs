@@ -176,6 +176,19 @@ namespace tukSpace
                     }
             }
 
+            if (mState.ScrollWheelValue != oldMState.ScrollWheelValue)
+                cam.Zoom += (float)(mState.ScrollWheelValue - oldMState.ScrollWheelValue) * .001f;
+
+           //being hacked in for testing
+            RotatedRectangle mousePointer =  new RotatedRectangle(new Rectangle(mState.X, mState.Y, 1, 1),0f);
+            if (mState.LeftButton == ButtonState.Released && oldMState.LeftButton == ButtonState.Pressed)
+            {
+                if (mousePointer.Intersects(pShip.collsionRectangle))
+                    pShip.shieldsUp = !pShip.shieldsUp;
+            }
+
+            
+
             base.HandleInput(gameTime, kState, mState);
         }
 
@@ -276,7 +289,7 @@ namespace tukSpace
                             viewPort.Height - (lowerLeft.Height / 2) - 25), Color.White);
 
             //draw velocity
-            currentSB.DrawString(smallerFont, pShip.engineController.CurrentVelocity.ToString(),
+            currentSB.DrawString(smallerFont, Math.Round(pShip.engineController.CurrentVelocity,2).ToString(),
                 new Vector2((lowerLeft.Width / 2) + 85,
                             viewPort.Height - (lowerLeft.Height / 2) + 95), Color.White);
 
