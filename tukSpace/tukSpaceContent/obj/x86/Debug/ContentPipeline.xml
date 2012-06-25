@@ -289,6 +289,15 @@
       <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\wizfont.xnb</Output>
       <Time>2010-12-28T21:58:50-05:00</Time>
     </Item>
+    <Item>
+      <Source>warpsystem.png</Source>
+      <Name>warpsystem</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\warpsystem.xnb</Output>
+      <Time>2012-06-25T11:09:33.3384264-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
