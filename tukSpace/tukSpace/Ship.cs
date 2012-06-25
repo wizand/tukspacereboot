@@ -38,6 +38,7 @@ namespace tukSpace
 
         public BoundingBox myBox;
         public Sector myLocation;
+        public RotatedRectangle collsionRectangle;
 
 
         public Ship()
@@ -49,6 +50,7 @@ namespace tukSpace
             shieldsUp = false;
             engineController = new EngineController(this);
             beamController = new BeamController(this, beamTexture);
+            
         }
 
         //public EngineController GetEngineController() { return engineController; }
@@ -106,6 +108,10 @@ namespace tukSpace
             }
             beamTexture = content.Load<Texture2D>("phaser");
             shieldOverlay = content.Load<Texture2D>("shield_overlay");
+
+            //just hacked in
+            collsionRectangle = new RotatedRectangle(new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height), rotationAngle);
+            collsionRectangle.Origin = new Vector2(27, 11);
         }
 
         public void LoadContent(ContentManager content, String texture)
@@ -114,6 +120,9 @@ namespace tukSpace
             beamTexture = content.Load<Texture2D>("phaser");
             shieldOverlay = content.Load<Texture2D>("shield_overlay");
             beamController.beamTexture = this.beamTexture; //quick hack
+            //just hacked in
+            collsionRectangle = new RotatedRectangle(new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height), rotationAngle);
+            collsionRectangle.Origin = new Vector2(27, 11);
         }
 
         //rotates the ship by a given value modified by rotationStep. 
@@ -140,13 +149,20 @@ namespace tukSpace
             rotationAngle = MathHelper.ToRadians(newRotation);
         }
 
-        //updates ship position, will eventually call all *controllers to update.
+        //updates ship position and associated components
         public void Update(GameTime gameTime)
         {
             myPosition.X += (float)(engineController.CurrentVelocity * Math.Cos(rotationAngle));
             myPosition.Y += (float)(engineController.CurrentVelocity * Math.Sin(rotationAngle));
             myBox = new BoundingBox(new Vector3(myPosition.X, myPosition.Y, 0),
                         new Vector3(myPosition.X + myTexture.Width, myPosition.Y + myTexture.Height, 0));
+
+            //update collision rectangle
+            //SOMETHING IS WRONG, BOX ISNT CLOSE TO EXACT. TOO SMALL MAYBE????????????????????????????????
+            collsionRectangle.CollisionRectangle.X = (int)myPosition.X;
+            collsionRectangle.CollisionRectangle.Y = (int)myPosition.Y;
+            collsionRectangle.Rotation = rotationAngle;
+
             beamController.Update(gameTime);
             
         }

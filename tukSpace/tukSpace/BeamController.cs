@@ -42,21 +42,26 @@ namespace tukSpace
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if ((CurrentlyFiring) && (targetIndex < TargetList.Count) && (FireMode == 0))
+            if (CurrentlyFiring)
             {
-                float radians = (float)Math.Atan2(TargetList[targetIndex].Y - theShip.myPosition.Y + 10, TargetList[targetIndex].X - theShip.myPosition.X + 10);
+                float radians = 0.0f;
+                Vector2 targetPosition = Vector2.Zero;
 
-                beamPos.X = theShip.myPosition.X + 5;
-                beamPos.Y = theShip.myPosition.Y + 3;
-                spriteBatch.Draw(beamTexture, beamPos, null, Color.White, radians, new Vector2(0, 5), 1.0f, SpriteEffects.None, 0f);
-            }
-            else if ((CurrentlyFiring) && (FireMode == 1))
+            if ((targetIndex < TargetList.Count) && (FireMode == 0))
             {
+                targetPosition = TargetList[targetIndex];
+            }
+            else if (FireMode == 1)
+            {
+                targetPosition = singleFireTarget;
+            }
+                radians = (float)Math.Atan2(targetPosition.Y - theShip.myPosition.Y + 10, targetPosition.X - theShip.myPosition.X + 10);
                 beamPos.X = theShip.myPosition.X + 5;
                 beamPos.Y = theShip.myPosition.Y + 3;
-                float radians = (float)Math.Atan2(singleFireTarget.Y - theShip.myPosition.Y + 10, singleFireTarget.X - theShip.myPosition.X + 10);
-                //spriteBatch.Draw(this.beamTexture, beamPos, null, Color.White, radians, new Vector2(0, 5), 1.0f, SpriteEffects.None, 0f);
-                spriteBatch.Draw(beamTexture, beamPos, Color.White);
+                Vector2 beamScale = Vector2.Zero;
+                beamScale.X = Vector2.Distance(targetPosition, theShip.myPosition) / beamTexture.Width;
+                beamScale.Y = 1f;
+            spriteBatch.Draw(this.beamTexture, beamPos, null, Color.White, radians, new Vector2(0, 5), beamScale, SpriteEffects.None, 0f);
             }
         }
 
