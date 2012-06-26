@@ -162,7 +162,7 @@ namespace tukSpace
             oldMState = mState;
         }
 
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             graphics.Clear(Color.Black);
             curScreen.Draw(gameTime, spriteBatch);
