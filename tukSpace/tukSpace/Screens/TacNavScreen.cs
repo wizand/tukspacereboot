@@ -126,7 +126,7 @@ namespace tukSpace
             spriteBatch.End();
 
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
-
+            //spriteBatch.Begin();
             /**int horTimes = (int)(cam.Zoom * viewPort.Width) / bgGrid.Width + 1;
             int verTimes = (int)(cam.Zoom * viewPort.Height) / bgGrid.Height + 1;
             for (int i = 0; i < verTimes; i++) spriteBatch.Draw(bgGrid, new Vector2(0 - 34, 0 + (i * bgGrid.Height) - 32 - i), Color.White);

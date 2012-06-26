@@ -35,6 +35,10 @@ namespace tukSpace
 
         public BeamController beamController { get; private set; }
 
+        //hacking in for phaser hit detection
+        public float shieldPercentage = 100;
+        public bool Destroyed = false;
+
         public bool beamOut;
         private Texture2D beamTexture;
 
@@ -159,6 +163,11 @@ namespace tukSpace
         //updates ship position and associated components
         public void Update(GameTime gameTime)
         {
+            if (shieldPercentage <= 0)
+            {
+                Destroyed = true;
+                return;
+            }
             myPosition.X += (float)(engineController.CurrentVelocity * Math.Cos(rotationAngle));
             myPosition.Y += (float)(engineController.CurrentVelocity * Math.Sin(rotationAngle));
             myBox = new BoundingBox(new Vector3(myPosition.X, myPosition.Y, 0),
@@ -179,6 +188,8 @@ namespace tukSpace
         //when updating, don't forget shield
         public void Draw(SpriteBatch spriteBatch)
         {
+            if (Destroyed)
+                return;
             DrawShield(spriteBatch);
             spriteBatch.Draw(myTexture, myPosition, null, Color.White, rotationAngle,
                     ROTATION_POINT, 1.0f, SpriteEffects.None, 0f);

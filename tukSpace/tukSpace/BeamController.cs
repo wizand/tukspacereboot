@@ -22,12 +22,17 @@ namespace tukSpace
 
         private double timer;
 
-        private Vector2 beamPos;
+        public Vector2 beamPos;
         public Texture2D beamTexture;
 
         public bool CurrentlyFiring;
         public int FireMode; //0 = auto target list thing, 1 = just one target
         public Vector2 singleFireTarget;
+
+        Vector2 beamScale = Vector2.Zero;
+        public float beamRotation;
+
+        public Rectangle collisionRectangle;
 
         public BeamController(Ship theShip, Texture2D beamTexture)
         {
@@ -38,13 +43,14 @@ namespace tukSpace
             targetIndex = 0;
             timer = 0.0f;
             FireMode = 0;
+            collisionRectangle = new Rectangle(0, 0, 0, 0);
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             if (CurrentlyFiring)
             {
-                float radians = 0.0f;
+                 beamRotation = 0.0f;
                 Vector2 targetPosition = Vector2.Zero;
 
             if ((targetIndex < TargetList.Count) && (FireMode == 0))
@@ -55,13 +61,13 @@ namespace tukSpace
             {
                 targetPosition = singleFireTarget;
             }
-                radians = (float)Math.Atan2(targetPosition.Y - theShip.myPosition.Y + 10, targetPosition.X - theShip.myPosition.X + 10);
+                beamRotation = (float)Math.Atan2(targetPosition.Y - theShip.myPosition.Y + 10, targetPosition.X - theShip.myPosition.X + 10);
                 beamPos.X = theShip.myPosition.X + 5;
                 beamPos.Y = theShip.myPosition.Y + 3;
-                Vector2 beamScale = Vector2.Zero;
+ 
                 beamScale.X = Vector2.Distance(targetPosition, theShip.myPosition) / beamTexture.Width;
                 beamScale.Y = 1f;
-            spriteBatch.Draw(this.beamTexture, beamPos, null, Color.White, radians, new Vector2(0, 5), beamScale, SpriteEffects.None, 0f);
+            spriteBatch.Draw(this.beamTexture, beamPos, null, Color.White, beamRotation, new Vector2(0, 5), beamScale, SpriteEffects.None, 0f);
             }
         }
 
@@ -92,6 +98,8 @@ namespace tukSpace
                         }
                     }
                 }
+                //beam collision box goes here.
+                collisionRectangle = new Rectangle((int)beamPos.X, (int)beamPos.Y, (int)beamScale.X, (int)beamScale.Y);
             }
 
         }
@@ -124,6 +132,7 @@ namespace tukSpace
 
         public void EndFiring()
         {
+            beamScale = Vector2.Zero;
             timer = 0;
             targetIndex = 0;
             CurrentlyFiring = false;

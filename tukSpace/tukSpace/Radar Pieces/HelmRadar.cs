@@ -28,10 +28,9 @@ namespace tukSpace
 
             foreach (Vector2 thisEnemy in scanResults)
             {
-               
                 Vector2 diffVect = thisEnemy - playerPos;
                 float distance = diffVect.Length();
-
+               
                 // Check if enemy is within RadarRange
                 if (distance >= RadarRange.X && distance <= RadarRange.Y)
                 {

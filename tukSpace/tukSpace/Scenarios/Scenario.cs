@@ -23,7 +23,7 @@ namespace tukSpace.Scenarios
         //firing system
         public Texture2D firepointText;
         public List<Vector2> firepointList = new List<Vector2>();
-
+        public Screen curScreen { get; protected set; }
         public Scenario(GraphicsDevice gr)
         {
             graphics = gr;
