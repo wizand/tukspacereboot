@@ -25,7 +25,7 @@ namespace tukSpace
 
         private String toolTipText = "Hover over something";
 
-        public EngineeringScreen(KeyboardState kState, MouseState mState, Ship pShip, Game1 theWorld, Texture2D engCutout)
+        public EngineeringScreen(KeyboardState kState, MouseState mState, Ship pShip, Scenarios.Scenario theWorld, Texture2D engCutout)
             : base(kState, mState, pShip, theWorld)
         {
             mainCutout = engCutout; //set the main picture we will use for the engineering display

@@ -52,7 +52,7 @@ namespace tukSpace
         // Place to store the list of NPShips
         List<Ship> allShips;
 
-        public HelmScreen(KeyboardState kState, MouseState mState, Ship pShip, Game1 theWorld, List<Ship> allShips, Viewport viewPort)
+        public HelmScreen(KeyboardState kState, MouseState mState, Ship pShip, Scenarios.Scenario theWorld, List<Ship> allShips, Viewport viewPort)
             : base(kState, mState, pShip, theWorld)
         {
             System.Console.WriteLine("DEBUG: HelmScreen constructor accessed");
@@ -174,10 +174,10 @@ namespace tukSpace
 
             //Rectangle mousePointer = new Rectangle(mState.X, mState.Y, pShip.myTexture.Width, pShip.myTexture.Height);
             Rectangle mousePointer = new Rectangle(mState.X, mState.Y, 1, 1);
-            Rectangle shipRect = new Rectangle((int)pShip.myPosition.X, (int)pShip.myPosition.Y,pShip.myTexture.Width, pShip.myTexture.Height);
+            
             if (mState.LeftButton == ButtonState.Released && oldMState.LeftButton == ButtonState.Pressed)
             {
-                if (RectCollision.Check(mousePointer,Vector2.Zero,0f,shipRect,Vector2.Zero,pShip.rotationAngle))
+                if (RectCollision.Check(mousePointer,Vector2.Zero,0f,pShip.collisionRectangle,Vector2.Zero,pShip.rotationAngle))
                     pShip.shieldsUp = !pShip.shieldsUp;
             }
             
@@ -210,7 +210,7 @@ namespace tukSpace
             spriteBatch.Begin();
                 //Method to handle all NPShips drawing
                 DrawNPShip(spriteBatch);
-
+            
                 //draw waypoints
                 foreach (Vector2 currentWayPoint in theWorld.waypointList) spriteBatch.Draw(theWorld.waypointText, currentWayPoint, Color.White);
                 foreach (Vector2 currentFirePoint in theWorld.firepointList) spriteBatch.Draw(theWorld.firepointText, currentFirePoint, Color.White);
