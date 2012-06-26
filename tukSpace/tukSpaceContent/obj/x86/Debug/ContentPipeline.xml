@@ -298,6 +298,24 @@
       <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\warpsystem.xnb</Output>
       <Time>2012-06-25T11:09:33.3384264-04:00</Time>
     </Item>
+    <Item>
+      <Source>enterprise90tCOLLISION.png</Source>
+      <Name>enterprise90tCOLLISION</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\enterprise90tCOLLISION.xnb</Output>
+      <Time>2012-06-26T00:48:58.45251-04:00</Time>
+    </Item>
+    <Item>
+      <Source>shieldOverlay.png</Source>
+      <Name>shieldOverlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\shieldOverlay.xnb</Output>
+      <Time>2012-06-26T01:04:02.8532388-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

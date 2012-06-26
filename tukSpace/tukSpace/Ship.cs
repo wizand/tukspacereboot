@@ -15,6 +15,10 @@ namespace tukSpace
 {
     class Ship
     {
+        //some constants
+        //public Vector2 ROTATION_POINT = new Vector2(25,7); //origin of rotation
+        public Vector2 ROTATION_POINT = Vector2.Zero;
+
         //changed the myTexture to public so it can be used in drawing individual enemies
         public Texture2D myTexture;
         public Vector2 myPosition;
@@ -108,7 +112,7 @@ namespace tukSpace
             }
             //Rectangle collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);
             beamTexture = content.Load<Texture2D>("phaser");
-            shieldOverlay = content.Load<Texture2D>("shield_overlay");
+            shieldOverlay = content.Load<Texture2D>("shieldOverlay");
             Rectangle collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);
         }
 
@@ -116,7 +120,7 @@ namespace tukSpace
         {
             myTexture = content.Load<Texture2D>(texture);
             beamTexture = content.Load<Texture2D>("phaser");
-            shieldOverlay = content.Load<Texture2D>("shield_overlay");
+            shieldOverlay = content.Load<Texture2D>("shieldOverlay");
             beamController.beamTexture = this.beamTexture; //quick hack
             //just hacked in
             //collsionRectangle = new RotatedRectangle(new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height), rotationAngle);
@@ -171,11 +175,14 @@ namespace tukSpace
 
         //27,11 is the center of sprite saucer. this allows for proper rotation along a fixed point
         //instead of top left corner
+        //no offset atm for collision testing
+        //when updating, don't forget shield
         public void Draw(SpriteBatch spriteBatch)
         {
             DrawShield(spriteBatch);
             spriteBatch.Draw(myTexture, myPosition, null, Color.White, rotationAngle,
-                    new Vector2(27, 11), 1.0f, SpriteEffects.None, 0f);
+                    ROTATION_POINT, 1.0f, SpriteEffects.None, 0f);
+
             beamController.Draw(spriteBatch);
         }
 
@@ -184,8 +191,8 @@ namespace tukSpace
         {
             if (shieldsUp == true)
             {
-                spriteBatch.Draw(shieldOverlay, myPosition, null, Color.White, rotationAngle,
-                                 new Vector2(27,11), 1.0f, SpriteEffects.None, 0f);
+                spriteBatch.Draw(shieldOverlay, myPosition - new Vector2(1,1), null, Color.White, rotationAngle,
+                                 ROTATION_POINT, 1.0f, SpriteEffects.None, 0f);
             }
         }
 

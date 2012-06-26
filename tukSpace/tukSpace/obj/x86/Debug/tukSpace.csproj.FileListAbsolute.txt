@@ -323,3 +323,5 @@ C:\Users\Mike\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\tukSpace.pd
 C:\Users\Mike\Desktop\tukspacereboot\tukSpace\tukSpace\obj\x86\Debug\tukSpace.exe.manifest
 C:\Users\Mike\Desktop\tukspacereboot\tukSpace\tukSpace\obj\x86\Debug\tukSpace.application
 C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\warpsystem.xnb
+C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\enterprise90tCOLLISION.xnb
+C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\shieldOverlay.xnb
