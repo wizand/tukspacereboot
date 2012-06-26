@@ -135,8 +135,8 @@
     <Compile Include="Helpers\Coordinates3.cs" />
     <Compile Include="Engine Pieces\EngineController.cs" />
     <Compile Include="RotatedRectangles\RectCollision.cs" />
-    <Compile Include="RotatedRectangles\RotatedRectangle.cs" />
     <Compile Include="Scenarios\DefaultScenario.cs" />
+    <Compile Include="Scenarios\KobayashiMaru.cs" />
     <Compile Include="Scenarios\Scenario.cs" />
     <Compile Include="Screens\EngineeringScreen.cs" />
     <Compile Include="Screens\TacNavScreen.cs" />
