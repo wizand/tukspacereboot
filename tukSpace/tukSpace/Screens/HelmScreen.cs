@@ -206,8 +206,8 @@ namespace tukSpace
             DrawBackground(spriteBatch);
             spriteBatch.End();
 
-           // spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
-            spriteBatch.Begin();
+           spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
+
                 //Method to handle all NPShips drawing
                 DrawNPShip(spriteBatch);
             
