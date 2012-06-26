@@ -166,15 +166,6 @@ namespace tukSpace
                 }
             }
 
-            else if (kState.IsKeyDown(Keys.P))
-            {
-                if (!base.oldKState.IsKeyDown(Keys.P))
-                {
-                    Console.WriteLine("Pete debug: " +
-                        //tukHelper.AngleBetween(pShip.myPosition, new Vector2(0, 0), new Vector2(300, 0)) );
-                    AngleBetweenHeadingAndWaypoint());
-                    }
-            }
 
             if (mState.ScrollWheelValue != oldMState.ScrollWheelValue)
                 cam.Zoom += (float)(mState.ScrollWheelValue - oldMState.ScrollWheelValue) * .001f;
@@ -183,9 +174,10 @@ namespace tukSpace
 
             //Rectangle mousePointer = new Rectangle(mState.X, mState.Y, pShip.myTexture.Width, pShip.myTexture.Height);
             Rectangle mousePointer = new Rectangle(mState.X, mState.Y, 1, 1);
+            Rectangle shipRect = new Rectangle((int)pShip.myPosition.X, (int)pShip.myPosition.Y,pShip.myTexture.Width, pShip.myTexture.Height);
             if (mState.LeftButton == ButtonState.Released && oldMState.LeftButton == ButtonState.Pressed)
             {
-                if (RectCollision.Check(pShip.collisionRectangle, new Vector2(27,11), pShip.rotationAngle, mousePointer, new Vector2(mousePointer.Width/2,mousePointer.Height/2), 0f))
+                if (RectCollision.Check(mousePointer,Vector2.Zero,0f,shipRect,Vector2.Zero,pShip.rotationAngle))
                     pShip.shieldsUp = !pShip.shieldsUp;
             }
             
@@ -214,7 +206,7 @@ namespace tukSpace
             DrawBackground(spriteBatch);
             spriteBatch.End();
 
-            //spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
+           // spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
             spriteBatch.Begin();
                 //Method to handle all NPShips drawing
                 DrawNPShip(spriteBatch);
@@ -301,6 +293,11 @@ namespace tukSpace
 
             //Warp state indicator
             currentSB.Draw(warpStatus, new Vector2(28, viewPort.Height - lowerLeft.Height + 21), Color.White);
+            //mouse location
+            string mouseCoords = oldMState.X.ToString() + "," + oldMState.Y.ToString();
+            currentSB.DrawString(smallerFont, mouseCoords, Vector2.Zero, Color.White);
+            string shipDimensions = pShip.myTexture.Width.ToString() + ", " + pShip.myTexture.Height;
+            currentSB.DrawString(smallerFont, shipDimensions, new Vector2(0, 25), Color.White);
         }
 
 

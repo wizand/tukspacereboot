@@ -8,14 +8,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="tukSpace.exe.manifest" size="20202">
+    <dependentAssembly dependencyType="install" codebase="tukSpace.exe.manifest" size="20981">
       <assemblyIdentity name="tukSpace.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xGqKqm0b1VE7z2MIzxt6H0Afaxg=</dsig:DigestValue>
+        <dsig:DigestValue>U951NaiSu2Xiq5QKuOrDW1z1N3A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

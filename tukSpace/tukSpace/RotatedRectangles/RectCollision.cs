@@ -195,7 +195,7 @@ namespace tukSpace
                 if (array[i] > max)
                     max = array[i];
             }
-
+            
             return max;
         }
     }

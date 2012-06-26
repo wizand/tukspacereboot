@@ -70,19 +70,6 @@ namespace tukSpace
             //graphics.ToggleFullScreen();
             graphics.ApplyChanges();
 
-            //just hacked in massive universe creation to see if it works
-            //i know its slow - commented out
-            /**theUniverse = new Universe(new Coordinates2(3, 3), new Coordinates2(5, 5));
-            uniCreated = false;
-            if (uniCreated == false)
-            {
-                System.Diagnostics.Stopwatch constructTimer = new System.Diagnostics.Stopwatch(); //timing the creation since i know its big
-                constructTimer.Start();
-                theUniverse.Construct();
-                constructTimer.Stop();
-                System.Console.WriteLine("Elapsed time: " + constructTimer.Elapsed.TotalSeconds.ToString());
-            }**/
-
             pShip = new Ship(graphics.GraphicsDevice.Viewport.Width / 2, graphics.GraphicsDevice.Viewport.Height / 2, false, 0f, true, null);
 
             //Adding few NPShips just for test
@@ -118,7 +105,7 @@ namespace tukSpace
             //that if an texture isnt set in the constructor, "enterprise90t" will be used.
             foreach (Ship currentShip in allShips) { currentShip.LoadContent(Content); }
 
-            pShip.LoadContent(Content, "enterprise90t");
+            pShip.LoadContent(Content, "enterprise90tCOLLISION");
 
             helmScreen.Initialize(Content);
             titleScreen.Initialize(Content);

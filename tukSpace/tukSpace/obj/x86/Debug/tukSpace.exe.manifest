@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tukSpace.exe" size="41984">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tukSpace.exe" size="44544">
       <assemblyIdentity name="tukSpace" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>HzI/FNE5c86pmsS6i5AUfXmR8Tw=</dsig:DigestValue>
+        <dsig:DigestValue>c41E9sCX4gh1shyvOc6Jp3iIW40=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -204,6 +204,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>oi8dJeY76NJh9BhzuM3ej3DUVEM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\enterprise90tCOLLISION.xnb" size="2499">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Y2tQuBbXR6UpUNQGEwP6CMVfhxQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\firepoint.xnb" size="1787">
@@ -330,6 +339,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>ibJibdU929UgYzP8Sh4cyiVsJPE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\shieldOverlay.xnb" size="2707">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>k6m/gdpTG6LxjYBrHSwJChto33A=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\title.xnb" size="2612587">
