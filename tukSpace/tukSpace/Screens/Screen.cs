@@ -14,7 +14,7 @@ namespace tukSpace
 {
     class Screen
     {
-        protected Game1 theWorld;
+        protected Scenarios.Scenario theWorld;
         protected KeyboardState oldKState;
         protected MouseState oldMState;
 
@@ -27,7 +27,7 @@ namespace tukSpace
         {
         }
 
-        public Screen(KeyboardState kState, MouseState mState, Ship theShip, Game1 theWorld)
+        public Screen(KeyboardState kState, MouseState mState, Ship theShip, Scenarios.Scenario theWorld)
         {
             pShip = theShip;
             oldKState = kState;

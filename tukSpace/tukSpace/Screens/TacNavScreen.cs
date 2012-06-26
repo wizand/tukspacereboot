@@ -21,7 +21,7 @@ namespace tukSpace
         private Viewport viewPort;
         private List<Ship> allShips;
 
-        public TacNavScreen(KeyboardState kState,  MouseState mState, Ship theShip, Game1 theWorld, List<Ship> allShips, Viewport viewport)
+        public TacNavScreen(KeyboardState kState,  MouseState mState, Ship theShip, Scenarios.Scenario theWorld, List<Ship> allShips, Viewport viewport)
             : base(kState, mState, theShip, theWorld)
         {
             this.viewPort = viewport;
