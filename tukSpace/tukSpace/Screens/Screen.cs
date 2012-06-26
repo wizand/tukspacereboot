@@ -52,5 +52,9 @@ namespace tukSpace
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
         }
+
+        public virtual void Update(GameTime gameTime)
+        {
+        }
     }
 }

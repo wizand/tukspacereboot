@@ -13,11 +13,11 @@ namespace tukSpace
 {
     class HelmRadar : Radar
     {
-
+        //rRange is now a Vector2, X is min distance, Y is max distance
         //example values:
         // rRange = 500.0f, rScreenRadius = 150.0f, rCenterPos = new Vector(150, 150)
         public HelmRadar(ContentManager Content, string playerDotPath, string enemyDotPath, string radarImagePath,
-                         float rRange, float rScreenRadius, Vector2 rCenterPos)
+                         Vector2 rRange, float rScreenRadius, Vector2 rCenterPos)
             : base(Content, playerDotPath, enemyDotPath, radarImagePath, rRange, rScreenRadius, rCenterPos)
         { }
 
@@ -33,10 +33,10 @@ namespace tukSpace
                 float distance = diffVect.Length();
 
                 // Check if enemy is within RadarRange
-                if (distance < RadarRange)
+                if (distance >= RadarRange.X && distance <= RadarRange.Y)
                 {
                     // Scale the distance from world coords to radar coords
-                    diffVect *= (RadarScreenRadius / RadarRange) * RADAR_SCALE_VALUE;
+                    diffVect *= (RadarScreenRadius / RadarRange.Y) * RADAR_SCALE_VALUE;
 
                     // Offset coords from radar's center
                     diffVect += RadarCenterPos;
@@ -53,10 +53,10 @@ namespace tukSpace
                 float distance = diffVect.Length();
 
                 // Check if enemy is within RadarRange
-                if (distance < RadarRange)
+                if (distance >= RadarRange.X && distance <= RadarRange.Y)
                 {
                     // Scale the distance from world coords to radar coords
-                    diffVect *= (RadarScreenRadius / RadarRange) * RADAR_SCALE_VALUE;
+                    diffVect *= (RadarScreenRadius / RadarRange.Y) * RADAR_SCALE_VALUE;
 
                     // Offset coords from radar's center
                     diffVect += RadarCenterPos;
@@ -71,5 +71,9 @@ namespace tukSpace
 
         }
 
+        public void SetRadarRange(Vector2 newRange)
+        {
+            RadarRange = newRange;
+        }
     }
 }

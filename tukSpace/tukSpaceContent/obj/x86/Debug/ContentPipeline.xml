@@ -316,6 +316,42 @@
       <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\shieldOverlay.xnb</Output>
       <Time>2012-06-26T01:04:02.8532388-04:00</Time>
     </Item>
+    <Item>
+      <Source>targetOverlay.png</Source>
+      <Name>targetOverlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\targetOverlay.xnb</Output>
+      <Time>2012-06-26T13:52:54.7218991-04:00</Time>
+    </Item>
+    <Item>
+      <Source>long.png</Source>
+      <Name>long</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\long.xnb</Output>
+      <Time>2012-06-26T14:58:44.2991105-04:00</Time>
+    </Item>
+    <Item>
+      <Source>medium.png</Source>
+      <Name>medium</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\medium.xnb</Output>
+      <Time>2012-06-26T14:58:44.3001106-04:00</Time>
+    </Item>
+    <Item>
+      <Source>short.png</Source>
+      <Name>short</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\short.xnb</Output>
+      <Time>2012-06-26T14:58:44.3001106-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
