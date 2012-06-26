@@ -34,7 +34,6 @@ namespace tukSpace
         TitleScreen titleScreen;
         TacNavScreen tacNavScreen;
         EngineeringScreen engScreen;
-        Screen curScreen;
 
         public DefaultScenario(GraphicsDevice gr)
             : base(gr)

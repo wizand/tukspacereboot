@@ -35,7 +35,6 @@ namespace tukSpace
         TacNavScreen tacNavScreen;
         EngineeringScreen engScreen;
         ScienceScreen sciScreen;
-        Screen curScreen;
 
         public KobayashiMaru(GraphicsDevice gr)
             : base(gr)
@@ -97,13 +96,22 @@ namespace tukSpace
                 {
                     currentShip.visible = true;
                 }
-                // if (!pShip.Equals(currentShip))
-                //{
-                //    if (pShip.collsionRectangle.Intersects(currentShip.collsionRectangle))
-                //        currentShip.shieldsUp = !currentShip.shieldsUp;
-                // }
+                if (!pShip.Equals(currentShip))
+                {
+                    if (currentShip.collisionRectangle.Contains(new Point((int)pShip.beamController.singleFireTarget.X, (int)pShip.beamController.singleFireTarget.Y)))
+                    {
+                        currentShip.shieldsUp = !currentShip.shieldsUp;
+                        currentShip.shieldPercentage -= 30 * gameTime.ElapsedGameTime.Milliseconds * 0.01f;
+                    }
+
+                    if (RectCollision.Check(currentShip.collisionRectangle, currentShip.myPosition, currentShip.rotationAngle,
+                        pShip.collisionRectangle, pShip.myPosition, pShip.rotationAngle))
+                    {
+                        currentShip.shieldsUp = !currentShip.shieldsUp;
+                    }
+                }
             }
-            ;
+            
             if (curScreen.ReleaseMe == true)
             {
                 curScreen = helmScreen;

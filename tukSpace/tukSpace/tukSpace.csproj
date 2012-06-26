@@ -138,7 +138,7 @@
     <Compile Include="Scenarios\DefaultScenario.cs" />
     <Compile Include="Scenarios\KobayashiMaru.cs" />
     <Compile Include="Scenarios\Scenario.cs" />
-    <Compile Include="Screens\EngineeringScreen.cs" />
+    <Compile Include="Scenarios\EngineeringScreen.cs" />
     <Compile Include="Screens\ScienceScreen.cs" />
     <Compile Include="Screens\TacNavScreen.cs" />
     <Compile Include="Weapons Pieces\Shield.cs" />

@@ -175,7 +175,7 @@ namespace tukSpace
             }
 
 
-            if (mState.ScrollWheelValue != oldMState.ScrollWheelValue)
+            if (mState.ScrollWheelValue != oldMState.ScrollWheelValue && theWorld.curScreen == this)
                 cam.Zoom += (float)(mState.ScrollWheelValue - oldMState.ScrollWheelValue) * .001f;
 
            //being hacked in for testing
@@ -226,8 +226,8 @@ namespace tukSpace
             DrawBackground(spriteBatch);
             spriteBatch.End();
 
-           spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
-            //spriteBatch.Begin();
+           //spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
+            spriteBatch.Begin();
                 //Method to handle all NPShips drawing
                 DrawNPShip(spriteBatch);
             
@@ -358,7 +358,7 @@ namespace tukSpace
             List<Vector2> scanResults = new List<Vector2>();
             foreach (Ship ship in allShips)
             {
-                if (ship.visible == true) //if we aren't drawing the ship, then for now lets not show it in radar either
+                if (ship.Destroyed == false) //if we aren't drawing the ship, then for now lets not show it in radar either
                 {
                     scanResults.Add(ship.myPosition);
                 }
