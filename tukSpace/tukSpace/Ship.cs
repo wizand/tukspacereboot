@@ -13,6 +13,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace tukSpace
 {
+    enum SensorMode { SHORT, MEDIUM, LONG };
     class Ship
     {
         //some constants
@@ -44,6 +45,7 @@ namespace tukSpace
         public Sector myLocation;
         public Rectangle collisionRectangle;
 
+        public SensorMode mySensorMode;
 
         public Ship()
         {
@@ -114,6 +116,8 @@ namespace tukSpace
             beamTexture = content.Load<Texture2D>("phaser");
             shieldOverlay = content.Load<Texture2D>("shieldOverlay");
             Rectangle collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);
+
+            mySensorMode = SensorMode.SHORT;
         }
 
         public void LoadContent(ContentManager content, String texture)
@@ -162,11 +166,7 @@ namespace tukSpace
 
             //update collision rectangle
             //SOMETHING IS WRONG, BOX ISNT CLOSE TO EXACT. TOO SMALL MAYBE????????????????????????????????
-            //collsionRectangle.CollisionRectangle.X = (int)myPosition.X;
-            //collsionRectangle.CollisionRectangle.Y = (int)myPosition.Y;
-            //collsionRectangle.Rotation = rotationAngle;
-            collisionRectangle.X = (int)myPosition.X;
-            collisionRectangle.Y = (int)myPosition.Y;
+
             collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);
 
             beamController.Update(gameTime);
@@ -207,6 +207,25 @@ namespace tukSpace
 
         }
 
+        public void SetSensorMode(SensorMode newMode)
+        {
+            mySensorMode = newMode;
+        }
 
+        public Vector2 GetSensorRange()
+        {
+            if (mySensorMode == SensorMode.SHORT)
+            {
+                return new Vector2(0f, 650f);
+            }
+            else if (mySensorMode == SensorMode.MEDIUM)
+            {
+                return new Vector2(650f, 1300f);
+            }
+            else
+            {
+                return new Vector2(1300f, 2000);
+            }
+        }
     }
 }

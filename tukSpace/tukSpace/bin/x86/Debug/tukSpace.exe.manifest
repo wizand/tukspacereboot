@@ -105,14 +105,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tukSpace.exe" size="42496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="tukSpace.exe" size="46080">
       <assemblyIdentity name="tukSpace" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>1k4MVjk//W0HH3i/aLcPxwjpTpQ=</dsig:DigestValue>
+        <dsig:DigestValue>O3en8rpWVPPIOBPzjflrMqTzUhs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -260,6 +260,15 @@
       <dsig:DigestValue>Oq/FZGQLYYV/r45LSLjVsryMZRU=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Content\long.xnb" size="12987">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>DXUl7VjG9yZWONMxXTY4u9+zHv8=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Content\lu_corner.xnb" size="88395">
     <hash>
       <dsig:Transforms>
@@ -267,6 +276,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>ENe3CbhL/vYqRPp0ProdfKgQyIc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\medium.xnb" size="12987">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>uueAqUrDZaMqWbe8kDunZXH+G1s=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\mike_ship.xnb" size="16027">
@@ -348,6 +366,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>k6m/gdpTG6LxjYBrHSwJChto33A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\short.xnb" size="12987">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gFkoiOLQwMblbTlMaOO3/MN9hZo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\targetOverlay.xnb" size="6587">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZxG1bI0U42xFbOXPwZDy9So6Hik=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\title.xnb" size="2612587">

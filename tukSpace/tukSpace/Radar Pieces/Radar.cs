@@ -20,7 +20,7 @@ namespace tukSpace
         private Vector2 RadarImageCenter;
 
         // Distance that the radar can "see"
-        protected float RadarRange;
+        protected Vector2 RadarRange;
 
         // Radius of radar circle on the screen
         protected float RadarScreenRadius;
@@ -32,7 +32,7 @@ namespace tukSpace
         protected static Vector2 RadarCenterPos;
 
         public Radar(ContentManager Content, string playerDotPath, string enemyDotPath, string radarImagePath,
-            float rRange, float rScreenRadius, Vector2 rCenterPos)
+            Vector2 rRange, float rScreenRadius, Vector2 rCenterPos)
         {
             PlayerDotImage = Content.Load<Texture2D>(playerDotPath);
             EnemyDotImage = Content.Load<Texture2D>(enemyDotPath);

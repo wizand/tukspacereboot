@@ -40,7 +40,7 @@ namespace tukSpace
             : base(gr)
         {
         }
-        public void Initialize()
+        public override void Initialize()
         {
             oldKState = Keyboard.GetState();
             pShip = new Ship(graphics.Viewport.Width / 2, graphics.Viewport.Height / 2, false, 0f, true, null);
@@ -57,7 +57,7 @@ namespace tukSpace
             gamePaused = false;
         }
 
-        public void LoadContent(ContentManager Content)
+        public override void LoadContent(ContentManager Content)
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             helmScreen = new HelmScreen(Keyboard.GetState(), Mouse.GetState(), pShip, this, allShips, graphics.Viewport);
@@ -82,7 +82,7 @@ namespace tukSpace
             curScreen = titleScreen;
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             pShip.Update(gameTime);
             //Coordinates5 garbage_coords = theUniverse.UpdateLocation(pShip.myLocation,pShip.myPosition);
@@ -109,6 +109,7 @@ namespace tukSpace
             {
                 curScreen = helmScreen;
             }
+            curScreen.Update(gameTime); //update our current screen
             HandleInput(gameTime); //calls our global input hook, which passes any unprocessed input to the currentitleScreen
         }
 

@@ -52,6 +52,10 @@ namespace tukSpace
         // Place to store the list of NPShips
         List<Ship> allShips;
 
+        //target reticule
+        Texture2D targetReticule;
+        Vector2 targetReticulePosition;
+
         public HelmScreen(KeyboardState kState, MouseState mState, Ship pShip, Scenarios.Scenario theWorld, List<Ship> allShips, Viewport viewPort)
             : base(kState, mState, pShip, theWorld)
         {
@@ -64,11 +68,12 @@ namespace tukSpace
         {
             //camera
             cam = new Camera2D(viewPort);
+            cam.Pos = pShip.myPosition;
 
             //Radar related:
             RadarTopLeft = new Vector2(viewPort.Width - 210, 10); //top right corner
             hRadar = new HelmRadar(Content, "playerDot", "enemyDot", "HelmRadarImage",
-                     650.0f, 120.0f, new Vector2(RadarTopLeft.X + 100, RadarTopLeft.Y + 100));
+                     pShip.GetSensorRange(), 120.0f, new Vector2(RadarTopLeft.X + 100, RadarTopLeft.Y + 100));
 
             //FONTS
             font = Content.Load<SpriteFont>("impulse");
@@ -93,6 +98,9 @@ namespace tukSpace
             upperRight = Content.Load<Texture2D>("ru_corner");
             lowerLeft = Content.Load<Texture2D>("Helm_model2");
             lowerRight = Content.Load<Texture2D>("rl_corner");
+
+            targetReticule = Content.Load<Texture2D>("targetOverlay");
+            targetReticulePosition = Vector2.Zero;
 
             base.Initialize();
         }
@@ -177,8 +185,23 @@ namespace tukSpace
             
             if (mState.LeftButton == ButtonState.Released && oldMState.LeftButton == ButtonState.Pressed)
             {
-                if (RectCollision.Check(mousePointer,Vector2.Zero,0f,pShip.collisionRectangle,Vector2.Zero,pShip.rotationAngle))
+                //did we click on pShip?
+                if (RectCollision.Check(mousePointer, Vector2.Zero, 0f, pShip.collisionRectangle, Vector2.Zero, pShip.rotationAngle))
+                {
                     pShip.shieldsUp = !pShip.shieldsUp;
+                }
+                else
+                {
+                    //lets check the other ships
+                    foreach (Ship aShip in allShips)
+                    {
+                        if (RectCollision.Check(mousePointer, Vector2.Zero, 0f, aShip.collisionRectangle, Vector2.Zero, aShip.rotationAngle))
+                        {
+                            targetReticulePosition = aShip.myPosition;
+                            break;
+                        }
+                    }
+                }
             }
             
 
@@ -197,9 +220,6 @@ namespace tukSpace
         //but i just changed the draw order a tad to avoid issues with flickering
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            //test out this camera
-            //quick hack to make camera work.
-            cam.Pos = pShip.myPosition;
 
             //should just draw background
             spriteBatch.Begin();
@@ -207,14 +227,18 @@ namespace tukSpace
             spriteBatch.End();
 
            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
-
+            //spriteBatch.Begin();
                 //Method to handle all NPShips drawing
                 DrawNPShip(spriteBatch);
             
                 //draw waypoints
                 foreach (Vector2 currentWayPoint in theWorld.waypointList) spriteBatch.Draw(theWorld.waypointText, currentWayPoint, Color.White);
                 foreach (Vector2 currentFirePoint in theWorld.firepointList) spriteBatch.Draw(theWorld.firepointText, currentFirePoint, Color.White);
-                //Player ship last
+            
+            //draw target reticule
+            if (targetReticulePosition != Vector2.Zero)
+                spriteBatch.Draw(targetReticule, targetReticulePosition, Color.White);
+            //Player ship last
                 pShip.Draw(spriteBatch);
 
             spriteBatch.End();
@@ -298,6 +322,8 @@ namespace tukSpace
             currentSB.DrawString(smallerFont, mouseCoords, Vector2.Zero, Color.White);
             string shipDimensions = pShip.myTexture.Width.ToString() + ", " + pShip.myTexture.Height;
             currentSB.DrawString(smallerFont, shipDimensions, new Vector2(0, 25), Color.White);
+            string camPosition = cam.Pos.X.ToString() + ", " + cam.Pos.Y.ToString();
+            currentSB.DrawString(smallerFont, camPosition, new Vector2(0, 50), Color.White);
         }
 
 
@@ -374,6 +400,15 @@ namespace tukSpace
             {
                 return 0.0f;
             }
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+                        //test out this camera
+            //quick hack to make camera work.
+            cam.Pos = new Vector2(12,0) + pShip.myPosition;
+            hRadar.SetRadarRange(pShip.GetSensorRange());
+            
         }
     }
 }

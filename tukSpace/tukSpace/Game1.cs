@@ -19,7 +19,7 @@ namespace tukSpace
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        DefaultScenario mainScenario;
+        Scenarios.Scenario mainScenario;
         
 
         public Game1()
@@ -37,7 +37,8 @@ namespace tukSpace
         /// </summary>
         protected override void Initialize()
         {
-            mainScenario = new DefaultScenario(graphics.GraphicsDevice);
+            //mainScenario = new DefaultScenario(graphics.GraphicsDevice);
+            mainScenario = new KobayashiMaru(graphics.GraphicsDevice);
             this.IsMouseVisible = true;
             graphics.PreferredBackBufferHeight = 720;
             graphics.PreferredBackBufferWidth = 1280;
