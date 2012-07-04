@@ -20,6 +20,8 @@ namespace tukSpace
         //public Vector2 ROTATION_POINT = new Vector2(25,7); //origin of rotation
         public Vector2 ROTATION_POINT = Vector2.Zero;
 
+        public int myID { get; private set; } //our id for networking mainly
+
         //changed the myTexture to public so it can be used in drawing individual enemies
         public Texture2D myTexture;
         public Vector2 myPosition;

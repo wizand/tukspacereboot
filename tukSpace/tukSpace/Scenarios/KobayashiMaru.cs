@@ -183,5 +183,9 @@ namespace tukSpace
             curScreen.Draw(gameTime, spriteBatch);
         }
 
+        public override void HandleNetworking()
+        {
+            
+        }
     }
 }

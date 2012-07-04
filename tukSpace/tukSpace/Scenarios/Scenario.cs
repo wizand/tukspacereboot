@@ -36,10 +36,17 @@ namespace tukSpace.Scenarios
         public virtual void Initialize()
         {
         }
+        
         public virtual void Update(GameTime gameTime)
         {
         }
         public virtual void LoadContent(ContentManager Content)
+        {
+        }
+
+        //this method will be intergrated directly into Update() once optimizations start
+        //currently itll iterate through the same lists as in the main Update()
+        public virtual void HandleNetworking()
         {
         }
     }

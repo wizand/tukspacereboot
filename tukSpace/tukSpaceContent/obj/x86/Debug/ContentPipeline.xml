@@ -272,24 +272,6 @@
       <Time>2012-06-22T00:51:56.1914868-04:00</Time>
     </Item>
     <Item>
-      <Source>impulse.spritefont</Source>
-      <Name>impulse</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\impulse.xnb</Output>
-      <Time>2010-12-27T18:10:14-05:00</Time>
-    </Item>
-    <Item>
-      <Source>wizfont.spritefont</Source>
-      <Name>wizfont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\wizfont.xnb</Output>
-      <Time>2010-12-28T21:58:50-05:00</Time>
-    </Item>
-    <Item>
       <Source>warpsystem.png</Source>
       <Name>warpsystem</Name>
       <Importer>TextureImporter</Importer>
@@ -352,6 +334,24 @@
       <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\short.xnb</Output>
       <Time>2012-06-26T14:58:44.3001106-04:00</Time>
     </Item>
+    <Item>
+      <Source>impulse.spritefont</Source>
+      <Name>impulse</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\impulse.xnb</Output>
+      <Time>2010-12-27T18:10:14-05:00</Time>
+    </Item>
+    <Item>
+      <Source>wizfont.spritefont</Source>
+      <Name>wizfont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\James Zarakas\Desktop\tukspacereboot\tukSpace\tukSpace\bin\x86\Debug\Content\wizfont.xnb</Output>
+      <Time>2010-12-28T21:58:50-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
@@ -387,6 +387,10 @@
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\James Zarakas\Desktop\Lidgren-network-gen3\Lidgren.Network\obj\Debug\Lidgren.Network.dll</Key>
+        <Value>2012-05-24T18:38:58.0253958-04:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>

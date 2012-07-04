@@ -134,6 +134,7 @@
     <Compile Include="Helpers\Coordinates2.cs" />
     <Compile Include="Helpers\Coordinates3.cs" />
     <Compile Include="Engine Pieces\EngineController.cs" />
+    <Compile Include="Networking\XNAExtensions.cs" />
     <Compile Include="RotatedRectangles\RectCollision.cs" />
     <Compile Include="Scenarios\DefaultScenario.cs" />
     <Compile Include="Scenarios\KobayashiMaru.cs" />
@@ -141,6 +142,7 @@
     <Compile Include="Scenarios\EngineeringScreen.cs" />
     <Compile Include="Screens\ScienceScreen.cs" />
     <Compile Include="Screens\TacNavScreen.cs" />
+    <Compile Include="Networking\tukNetwork.cs" />
     <Compile Include="Weapons Pieces\Shield.cs" />
     <Compile Include="Weapons Pieces\ShieldController.cs" />
     <Compile Include="World\Quadrant.cs" />
