@@ -28,8 +28,6 @@ Content\mike_ship.xnb
 Content\waypointDot.xnb
 Content\firepoint.xnb
 Content\enterprise_cutout.xnb
-Content\impulse.xnb
-Content\wizfont.xnb
 Content\warpsystem.xnb
 Content\enterprise90tCOLLISION.xnb
 Content\shieldOverlay.xnb
@@ -37,3 +35,5 @@ Content\targetOverlay.xnb
 Content\long.xnb
 Content\medium.xnb
 Content\short.xnb
+Content\impulse.xnb
+Content\wizfont.xnb
