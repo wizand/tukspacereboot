@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace tukSpace
 {
-    class Screen
+    public class Screen
     {
         protected Scenarios.Scenario theWorld;
         protected KeyboardState oldKState;

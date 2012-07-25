@@ -13,8 +13,8 @@ using Microsoft.Xna.Framework.Media;
 
 namespace tukSpace
 {
-    enum SensorMode { SHORT, MEDIUM, LONG };
-    class Ship
+    public enum SensorMode { SHORT, MEDIUM, LONG };
+    public class Ship
     {
         //some constants
         //public Vector2 ROTATION_POINT = new Vector2(25,7); //origin of rotation
@@ -204,7 +204,7 @@ namespace tukSpace
         {
             if (shieldsUp == true)
             {
-                spriteBatch.Draw(shieldOverlay, myPosition - new Vector2(1,1), null, Color.White, rotationAngle,
+                spriteBatch.Draw(shieldOverlay, myPosition, null, Color.White, rotationAngle,
                                  ROTATION_POINT, 1.0f, SpriteEffects.None, 0f);
             }
         }

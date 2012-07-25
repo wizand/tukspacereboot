@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace tukSpace
 {
-    class Sector
+    public class Sector
     {
         public int borderLength; //our size, the overall shape is a square so just one value is needed.
         public Coordinates5 coords;

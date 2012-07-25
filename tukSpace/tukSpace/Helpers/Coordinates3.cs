@@ -5,7 +5,7 @@ using System.Text;
 
 namespace tukSpace
 {
-    class Coordinates3 : Coordinates2
+    public class Coordinates3 : Coordinates2
     {
         public int Z { get; set; }
 

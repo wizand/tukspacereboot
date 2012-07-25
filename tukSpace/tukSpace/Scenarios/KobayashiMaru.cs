@@ -98,13 +98,14 @@ namespace tukSpace
                 }
                 if (!pShip.Equals(currentShip))
                 {
+                    currentShip.collisionRectangle.X -= 10;
                     if (currentShip.collisionRectangle.Contains(new Point((int)pShip.beamController.singleFireTarget.X, (int)pShip.beamController.singleFireTarget.Y)))
                     {
                         currentShip.shieldsUp = !currentShip.shieldsUp;
                         currentShip.shieldPercentage -= 30 * gameTime.ElapsedGameTime.Milliseconds * 0.01f;
                     }
-
-                    if (RectCollision.Check(currentShip.collisionRectangle, currentShip.myPosition, currentShip.rotationAngle,
+                    //still off.
+                    if (RectCollision.Check(currentShip.collisionRectangle, pShip.ROTATION_POINT, currentShip.rotationAngle,
                         pShip.collisionRectangle, pShip.myPosition, pShip.rotationAngle))
                     {
                         currentShip.shieldsUp = !currentShip.shieldsUp;

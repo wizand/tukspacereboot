@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace tukSpace
 {
-    class BeamController
+    public class BeamController
     {
         private Ship theShip;
 

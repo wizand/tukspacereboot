@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace tukSpace
 {
-    class Engine
+    public class Engine
     {
 
         protected float MAX_SPEED;
