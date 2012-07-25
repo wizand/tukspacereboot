@@ -179,10 +179,9 @@ namespace tukSpace
                 cam.Zoom += (float)(mState.ScrollWheelValue - oldMState.ScrollWheelValue) * .001f;
 
            //being hacked in for testing
-
-            //Rectangle mousePointer = new Rectangle(mState.X, mState.Y, pShip.myTexture.Width, pShip.myTexture.Height);
+            
+            //converting the mousepointer to world space is essential when using a camera. 
             Vector2 adjustedMousePos = cam.ToWorldLocation(new Vector2(mState.X, mState.Y));
-            //Rectangle mousePointer = new Rectangle(mState.X, mState.Y, 1, 1);
             Rectangle mousePointer = new Rectangle((int)adjustedMousePos.X, (int)adjustedMousePos.Y, 1, 1);
             
             if (mState.LeftButton == ButtonState.Released && oldMState.LeftButton == ButtonState.Pressed)
@@ -381,25 +380,6 @@ namespace tukSpace
         {
             if (theWorld.waypointList.Count >0)
             {
-                /****
-                 * seems to work now, saved your old code for legacy. although this function needs to be cleaned up, as does
-                 * tukHelper. we made a mess!
-                 * 
-                 * 
-                //using the same lenght vector than the distance between wp and ship
-                double distance = tukHelper.determineDistance(theWorld.waypointList[0], pShip.myPosition);
-
-                //this might very well be the problem. my brain is freezing out now.
-                Vector2 headingCoords = new Vector2((float)(distance * Math.Cos(pShip.rotationAngle)), (float)(distance * Math.Sin(pShip.rotationAngle)));
-
-                Console.WriteLine("New coords in Heading direction: " + headingCoords.X + " " + headingCoords.Y);
-                Console.WriteLine("Distance to the Wp: " + distance);
-
-                Vector2 waypointCoords = theWorld.waypointList[0];
-
-                //return tukHelper.AngleBetween(pShip.myPosition, waypointCoords, headingCoords);
-                 * ***/
-
                 return tukHelper.FindAngleToTurn(pShip.myPosition, theWorld.waypointList[0]);
             }
             else
