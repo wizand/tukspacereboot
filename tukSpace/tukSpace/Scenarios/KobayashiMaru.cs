@@ -36,6 +36,8 @@ namespace tukSpace
         EngineeringScreen engScreen;
         ScienceScreen sciScreen;
 
+        tukNetwork NetworkManager;
+
         public KobayashiMaru(GraphicsDevice gr)
             : base(gr)
         {
@@ -51,6 +53,9 @@ namespace tukSpace
             allShips.Add(new Ship(1200, 100, false, 30, true, null));
             allShips.Add(new Ship(600, 700, true, "enemy1", true, null));
 
+            NetworkManager = new tukNetwork();
+            NetworkManager.UseNetworking = true;
+            NetworkManager.Initialize(true, this);
             gamePaused = false;
         }
 
@@ -119,6 +124,9 @@ namespace tukSpace
             }
             curScreen.Update(gameTime); //update our current screen
             HandleInput(gameTime); //calls our global input hook, which passes any unprocessed input to the currentitleScreen
+
+            //update network
+            NetworkManager.Update(gameTime);
         }
 
         /// <summary>
