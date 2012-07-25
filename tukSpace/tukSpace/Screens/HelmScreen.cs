@@ -181,7 +181,9 @@ namespace tukSpace
            //being hacked in for testing
 
             //Rectangle mousePointer = new Rectangle(mState.X, mState.Y, pShip.myTexture.Width, pShip.myTexture.Height);
-            Rectangle mousePointer = new Rectangle(mState.X, mState.Y, 1, 1);
+            Vector2 adjustedMousePos = cam.ToWorldLocation(new Vector2(mState.X, mState.Y));
+            //Rectangle mousePointer = new Rectangle(mState.X, mState.Y, 1, 1);
+            Rectangle mousePointer = new Rectangle((int)adjustedMousePos.X, (int)adjustedMousePos.Y, 1, 1);
             
             if (mState.LeftButton == ButtonState.Released && oldMState.LeftButton == ButtonState.Pressed)
             {
@@ -209,6 +211,8 @@ namespace tukSpace
         }
 
 
+
+
         //a better draw order will need to be established eventually.
         //player ship now draws last so its on top of everything else.
         //camera now added. First we use the sprite batch to draw objects that are relative to the player ship with funky settings
@@ -226,8 +230,8 @@ namespace tukSpace
             DrawBackground(spriteBatch);
             spriteBatch.End();
 
-           //spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
-            spriteBatch.Begin();
+           spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, cam.get_transformation(spriteBatch.GraphicsDevice));
+            //spriteBatch.Begin();
                 //Method to handle all NPShips drawing
                 DrawNPShip(spriteBatch);
             

@@ -84,6 +84,7 @@ namespace tukSpace
             this.myLocation = myLocation;
             beamController = new BeamController(this, beamTexture);
 
+
         }
 
         //This one is to choose texture on the construction phase
@@ -99,9 +100,10 @@ namespace tukSpace
             textureName = texture;
             this.visible = visible;
             this.myLocation = myLocation;
-            beamController = new BeamController(this, beamTexture); 
-            
+            beamController = new BeamController(this, beamTexture);
+          
         }
+
 
         //Overloading the LoadContent -method for the new constructor use. 
         //Setting the enterprise texture as default.
@@ -121,9 +123,10 @@ namespace tukSpace
             //Rectangle collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);
             beamTexture = content.Load<Texture2D>("phaser");
             shieldOverlay = content.Load<Texture2D>("shieldOverlay");
-            Rectangle collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);
+            //Rectangle collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);
 
             mySensorMode = SensorMode.SHORT;
+            collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);  
         }
 
         public void LoadContent(ContentManager content, String texture)
@@ -135,7 +138,8 @@ namespace tukSpace
             //just hacked in
             //collsionRectangle = new RotatedRectangle(new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height), rotationAngle);
             //collsionRectangle.Origin = new Vector2(27, 11);
-            Rectangle collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);
+            //Rectangle collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);
+            collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);  
         }
 
         //rotates the ship by a given value modified by rotationStep. 
@@ -178,7 +182,8 @@ namespace tukSpace
             //update collision rectangle
             //SOMETHING IS WRONG, BOX ISNT CLOSE TO EXACT. TOO SMALL MAYBE????????????????????????????????
 
-            collisionRectangle = new Rectangle((int)myPosition.X, (int)myPosition.Y, myTexture.Width, myTexture.Height);
+            collisionRectangle.X = (int)myPosition.X;
+            collisionRectangle.Y = (int)myPosition.Y;
 
             beamController.Update(gameTime);
             
