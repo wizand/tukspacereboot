@@ -239,9 +239,11 @@ namespace tukSpace
                 foreach (Vector2 currentWayPoint in theWorld.waypointList) spriteBatch.Draw(theWorld.waypointText, currentWayPoint, Color.White);
                 foreach (Vector2 currentFirePoint in theWorld.firepointList) spriteBatch.Draw(theWorld.firepointText, currentFirePoint, Color.White);
             
-            //draw target reticule
+            //draw target reticule, offset is wrong somehow. 
             if (targetReticulePosition != Vector2.Zero)
-                spriteBatch.Draw(targetReticule, targetReticulePosition, Color.White);
+                //spriteBatch.Draw(targetReticule, targetReticulePosition, Color.White);
+            spriteBatch.Draw(targetReticule, targetReticulePosition, null, Color.White, pShip.rotationAngle,
+                    pShip.ROTATION_POINT, 1.0f, SpriteEffects.None, 0f);
             //Player ship last
                 pShip.Draw(spriteBatch);
 

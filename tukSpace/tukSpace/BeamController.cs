@@ -64,7 +64,7 @@ namespace tukSpace
                 beamRotation = (float)Math.Atan2(targetPosition.Y - theShip.myPosition.Y + 10, targetPosition.X - theShip.myPosition.X + 10);
                 beamPos.X = theShip.myPosition.X + 5;
                 beamPos.Y = theShip.myPosition.Y + 3;
- 
+                //beam is a bit shy of cursor
                 beamScale.X = Vector2.Distance(targetPosition, theShip.myPosition) / beamTexture.Width;
                 beamScale.Y = 1f;
             spriteBatch.Draw(this.beamTexture, beamPos, null, Color.White, beamRotation, new Vector2(0, 5), beamScale, SpriteEffects.None, 0f);
