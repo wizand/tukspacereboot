@@ -84,7 +84,7 @@ namespace tukSpace
             //single fire target mode
             else if ((mState.RightButton == ButtonState.Pressed))
             {
-                pShip.beamController.ManualFireStart(new Vector2(mState.X,mState.Y));
+                pShip.beamController.ManualFireStart(cam.ToWorldLocation(new Vector2(mState.X, mState.Y)));
                 pShip.beamController.singleFireTarget.X = mState.X;
                 pShip.beamController.singleFireTarget.Y = mState.Y;
             }
