@@ -5,7 +5,7 @@ using System.Text;
 
 namespace tukSpace
 {
-    class EngineController
+    public class EngineController
     {
         private WarpEngine warp;
         private ImpulseEngine impulse;

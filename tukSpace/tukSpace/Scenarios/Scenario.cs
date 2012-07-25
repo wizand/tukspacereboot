@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace tukSpace.Scenarios
 {
-    class Scenario
+    public class Scenario
     {
         public GraphicsDevice graphics;
         //waypoint system

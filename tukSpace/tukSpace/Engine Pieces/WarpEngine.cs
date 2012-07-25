@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 
 namespace tukSpace
 {
-    class WarpEngine : Engine
+    public class WarpEngine : Engine
     {
         /// <summary>
         ///  Just a wrapper for the Engine() constructor, all values
